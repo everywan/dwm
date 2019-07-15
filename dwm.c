@@ -815,6 +815,8 @@ focusin(XEvent *e)
 		setfocus(selmon->sel);
 }
 
+// 在显示器间切换焦点.
+// TODO: 修改为支持循环
 void
 focusmon(const Arg *arg)
 {

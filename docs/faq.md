@@ -1,0 +1,1 @@
+selmon: self monitor, 当前显示器
