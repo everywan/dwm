@@ -68,8 +68,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {0} },
 
 	/* 焦点切换 显示器/tag/stack */
-	{ MODKEY,                       XK_Tab,    focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Tab,    focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_Tab,    swapfocus,      { 0 } },
 	{ MODKEY,                       XK_a,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_d,      focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_a,      movestack,      {.i = -1 } },
