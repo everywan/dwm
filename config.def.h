@@ -72,8 +72,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Tab,    focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_a,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_d,      focusstack,     {.i = +1 } },
-	// { MODKEY|ShiftMask,             XK_a,      movestack,      {.i = -1 } },
-	// { MODKEY|ShiftMask,             XK_d,      movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_a,      movestack,      {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_d,      movestack,      {.i = +1 } },
 
   /* 修改布局, stack大小 */
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[0]} },
