@@ -15,6 +15,7 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeHid]  = { col_cyan,  col_gray1, col_cyan  },
 };
 
 /* tagging */
@@ -69,8 +70,8 @@ static Key keys[] = {
 	/* 焦点切换 显示器/tag/stack */
 	{ MODKEY,                       XK_Tab,    focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,    focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_a,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_a,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_d,      focusstack,     {.i = +1 } },
 	// { MODKEY|ShiftMask,             XK_a,      movestack,      {.i = -1 } },
 	// { MODKEY|ShiftMask,             XK_d,      movestack,      {.i = +1 } },
 
@@ -102,6 +103,7 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
