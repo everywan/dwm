@@ -56,6 +56,8 @@ static const Layout layouts[] = {
 /* commands */
 // static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "termite", "~/.config/termite/config" };
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "termite", "~/.config/termite/config" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -66,6 +68,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {0} },
+	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 
 	/* 焦点切换 显示器/tag/stack */
 	{ MODKEY,                       XK_Tab,    swapfocus,      { 0 } },
