@@ -8,6 +8,9 @@ OBJ = ${SRC:.c=.o}
 
 all: options config.h dwm
 
+merge:
+	@git pull git://git.suckless.org/dwm --allow-unrelated-histories
+
 options:
 	@echo dwm build options:
 	@echo "CFLAGS   = ${CFLAGS}"
